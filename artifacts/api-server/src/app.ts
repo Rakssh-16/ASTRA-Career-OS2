@@ -1,6 +1,6 @@
 import express, { type Express } from "express";
 import cors from "cors";
-import pinoHttp from "pino-http";
+import pinoHttp = require("pino-http");
 import router from "./routes";
 import { logger } from "./lib/logger";
 
@@ -33,4 +33,3 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api", router);
 
 export default app;
-
